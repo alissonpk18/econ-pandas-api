@@ -1,0 +1,10 @@
+[project]
+name = "indicadores-economicos-api"
+version = "1.0.0"
+description = "API de indicadores econômicos do Brasil (SGS/BCB) tratados com Pandas"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+# Garante que `import app...` funcione ao rodar pytest da raiz do repo.
+pythonpath = ["."]
+testpaths = ["tests"]
