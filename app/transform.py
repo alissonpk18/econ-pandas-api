@@ -202,6 +202,7 @@ def summary(s: pd.Series, janela: int = 12) -> dict:
     yoy = yoy_change(mensal)
     media = rolling_mean(mensal, janela)
 
+    # Converte para float ou None — evita NaN vazar para o JSON de resposta.
     def _f(x: object) -> float | None:
         return float(x) if pd.notna(x) else None
 
