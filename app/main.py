@@ -39,6 +39,7 @@ app = FastAPI(
 # Helpers
 # --------------------------------------------------------------------------- #
 def _serie_meta(codigo: int) -> Serie:
+    """Devolve os metadados da série ou levanta 404 se o código não está no catálogo."""
     meta = SERIES.get(codigo)
     if meta is None:
         raise HTTPException(
