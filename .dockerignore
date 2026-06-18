@@ -1,0 +1,11 @@
+.git/
+.github/
+.venv/
+__pycache__/
+*.pyc
+tests/
+requirements-dev.txt
+.gitignore
+.dockerignore
+README.md
+pyproject.toml
